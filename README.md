@@ -363,7 +363,7 @@ Let's say you put your standard interpretation, notice, severance, boilerplate t
 
 If you were lawyering like coders think you would abstract these provisions into their own file within your contracts templates folder. Then you would have all of your templates reference back to that partial. Later, if there is some change in the law you would just go into the partial, make the necessary change in order to adapt your template based on the change, and then all of your templates which refer to that partial will be automatically updated. A bit more simple then updating each and every one of your templates, eh?
 
-Another way to use partials is to build a new contract based on a template by simply opening a new file, importing the template, making the YAML front matter, filling in the front matter, and running the legalmarkdown parse. All you had to do was type one line, fill in some fields, and run two commands and you have a full contract directly from your template library.
+Another way to use partials is to build a new contract based on a template by simply opening a new file, importing the template, making the YAML front matter, filling in the front matter, and running the `legalmarkdown parse`. All you had to do was type one line, fill in some fields, and run two commands and you have a full contract directly from your template library.
 
 Partials are simple. They use the `@import [filename]` syntax on a line by itself. So if your final provisions are kept in a file in the same folder called final_provisions.lmd you would put `@import final_provisions.lmd` on its own line (either within a structured headers block or outside of it) and the library will import the contents of the partial before parsing the document.
 
