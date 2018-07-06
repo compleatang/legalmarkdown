@@ -3,13 +3,14 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/compleatang/legalmarkdown/lmd"
 	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"github.com/compleatang/legalmarkdown/lmd"
 )
 
 const CLR_0 = "\x1b[30;1m"
@@ -265,29 +266,6 @@ func TestGetParameters(t *testing.T) {
 		t.Error("JSONizing parameters #2 -- made from a raw LMD -- failed.\n")
 	} else {
 		fmt.Println(CLR_G, "JSONizing parameters #2 -- made from a raw LMD -- passed.\n", CLR_N)
-	}
-}
-
-func TestLegalToRenderingToPDF(t *testing.T) {
-	fmt.Println(CLR_B, "\n\tTesting Rendering to PDF\n", CLR_N)
-
-	testFile := filepath.Join(".", "spec", "00.load_write_no_action.md")
-
-	// make a temp file
-	tempFile, tempFileErr := ioutil.TempFile(os.TempDir(), "lmd-test-")
-	if tempFileErr != nil {
-		t.Error(tempFileErr)
-	}
-	defer os.Remove(tempFile.Name())
-
-	// dowit
-	lmd.MarkdownToPDF(testFile, "", tempFile.Name())
-
-	// read the tempfile
-	iMadeThisFile := lmd.ReadAFile(tempFile.Name())
-
-	if iMadeThisFile == "" {
-		t.Error("Did not create a pdf.")
 	}
 }
 
