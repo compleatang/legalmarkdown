@@ -1,7 +1,7 @@
 # Eris Legal Markdown: Putting The Contracts in Smart Contracts
 
 [![Stories in Ready](https://badge.waffle.io/eris-ltd/legalmarkdown.png?label=ready&title=Ready)](https://waffle.io/eris-ltd/legalmarkdown)
-[![Build Status](https://travis-ci.org/eris-ltd/legalmarkdown.svg?branch=master)](https://travis-ci.org/eris-ltd/legalmarkdown)[![GoDoc](https://godoc.org/github.com/eris-ltd/legalmarkdown/lmd?status.png)](https://godoc.org/github.com/eris-ltd/legalmarkdown/lmd)
+[![Build Status](https://travis-ci.org/eris-ltd/legalmarkdown.svg?branch=master)](https://travis-ci.org/eris-ltd/legalmarkdown)[![GoDoc](https://godoc.org/github.com/compleatang/legalmarkdown/lmd?status.png)](https://godoc.org/github.com/compleatang/legalmarkdown/lmd)
 
 ## Introduction
 
@@ -15,15 +15,15 @@ This library was built specifically to empower the creation of structured legal 
 
 #### Option A:
 
-Install the executable from [github's releases](https://github.com/eris-ltd/legalmarkdown/releases) somewhere in your path.
+Install the executable from [github's releases](https://github.com/compleatang/legalmarkdown/releases) somewhere in your path.
 
 #### Option B:
 
 Build from source. You must have go installed. `legalmarkdown` has been tested against go 1.2 and go 1.3
 
 ```bash
-go get -u github.com/eris-ltd/legalmarkdown
-cd $GOPATH/src/github.com/eris-ltd/legalmarkdown
+go get -u github.com/compleatang/legalmarkdown
+cd $GOPATH/src/github.com/compleatang/legalmarkdown
 go install
 ```
 
@@ -47,7 +47,7 @@ All these commands are available from within Go as well if you would prefer to c
 
 ```go
 import (
-  "github.com/eris-ltd/legalmarkdown/lmd"
+  "github.com/compleatang/legalmarkdown/lmd"
 )
 
 lmd.LegalToMarkdown(contents_file, parameters_file, output_file)

@@ -6,10 +6,11 @@
 package main
 
 import (
-	"github.com/codegangsta/cli"
-	"github.com/eris-ltd/legalmarkdown/lmd"
 	"log"
 	"os"
+
+	"github.com/codegangsta/cli"
+	"github.com/compleatang/legalmarkdown/lmd"
 )
 
 // main parses the command line inputs and routes the commands to the appropriate wrapper
@@ -20,8 +21,8 @@ func main() {
 	legalmd.Name = "legalmarkdown"
 	legalmd.Usage = "Automate your contracting."
 	legalmd.Version = "0.9.0"
-	legalmd.Author = "Eris Industries, Ltd."
-	legalmd.Email = "contact@erisindustries.com"
+	legalmd.Author = "Monax"
+	legalmd.Email = "contact@monax.io"
 
 	legalmd.Commands = []cli.Command{
 

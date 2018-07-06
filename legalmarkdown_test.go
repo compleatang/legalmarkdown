@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/eris-ltd/legalmarkdown/lmd"
+	"github.com/compleatang/legalmarkdown/lmd"
 	"io/ioutil"
 	"log"
 	"os"
